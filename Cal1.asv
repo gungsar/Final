@@ -9,11 +9,11 @@ function [] = Cal1()
     
     
     aa.input1 = uicontrol('style','text','units','normalized','position',[.20 .780 .3 0.1],'string',num2str(aa.numBox1),'horizontalalignment','left','fontsize',20); 
-    aa.input1str = uicontrol('style','text','units','normalized','position',[.20 .90 .3 0.05],'string','INPUT1:','horizontalalignment','left','fontsize',15); 
+    %aa.input1str = uicontrol('style','text','units','normalized','position',[.10 .85 .3 0.1],'string','','horizontalalignment','left','fontsize',20); 
     aa.input2 = uicontrol('style','text','units','normalized','position',[.60 .780 .3 0.1],'string',num2str(aa.numBox2),'horizontalalignment','left','fontsize',20);
-    aa.input2str = uicontrol('style','text','units','normalized','position',[.60 .90 .3 0.05],'string','INPUT2:','horizontalalignment','left','fontsize',15); 
-    aa.output = uicontrol('style','text','units','normalized','position',[.10 .05 .5 0.1],'string',num2str(aa.solution),'horizontalalignment','left','fontsize',20);
-    aa.outputstr = uicontrol('style','text','units','normalized','position',[.10 .15 .3 0.05],'string','SOLUTION:','horizontalalignment','left','fontsize',15); 
+    %aa.input2str = uicontrol('style','text','units','normalized','position',[.10 .85 .3 0.1],'string',num2str(aa.numBox1),'horizontalalignment','left','fontsize',20); 
+    aa.output = uicontrol('style','text','units','normalized','position',[.10 .05 .3 0.1],'string',num2str(aa.solution),'horizontalalignment','left','fontsize',20);
+    %aa.outputstr = uicontrol('style','text','units','normalized','position',[.10 .85 .2 0.1],'string',num2str(aa.numBox1),'horizontalalignment','left','fontsize',20); 
     
     
     aa.one = uicontrol('style','pushbutton','units','normalized','position',[.10 .640 .10 .10],'string','1','callback', {@numInput,1});
@@ -37,7 +37,7 @@ function [] = Cal1()
     aa.divide = uicontrol('style','pushbutton','units','normalized','position',[.550 .250 .10 .10],'string','/','callback', {@divide});
     aa.clear = uicontrol('style','pushbutton','units','normalized','position',[.40 .25 .10 .10],'string','C','callback', {@clear,0});
      
-    aa.switch = uicontrol('style','radio','units','normalized','position',[.60 .05 .50 .10],'string','Switch Between Input','horizontalalignment','left','fontsize',15,'callback', {@radio});
+    aa.switch = uicontrol('style','radio','units','normalized','position',[.50 .05 .50 .10],'string','Switch Between Input','horizontalalignment','left','fontsize',15,'callback', {@radio});
 end
 
 function [] = radio(source,element)
